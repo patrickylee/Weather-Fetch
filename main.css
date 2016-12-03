@@ -12,6 +12,10 @@ html, body{
  padding-top: 22px;
 }
 
+#div1{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 .question-same-line {
   font-family: 'Source Sans Pro';
   font-size: 20px;
