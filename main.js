@@ -10,9 +10,10 @@
     function myFunction() {
       var city = document.getElementById('location').value;
       console.log(city);
-
+      $("#div1").fadeOut(1500);
       $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "uk&units=metric&appid=48a8c111df81fd58c7240c8f432660e7").then(function(data) {
         var weather = document.getElementById('weather');
-        weather.innerText = data.main.temp;
+        weather.innerText = "It is "+data.main.temp+"°C in "+city+".";
+		$("#div1").fadeIn(1500);
     })
 }
