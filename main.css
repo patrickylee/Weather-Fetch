@@ -1,25 +1,18 @@
 /* this is our style sheet */
 
-html, body{
-  padding:0;
-  margin:0;
-}
-
 #header {
  color: #69cbf0;
- font-family: 'Source Sans Pro', sans-serif;
  font-size: 25px;
  padding-top: 22px;
 }
 
-#div1{
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 .question-same-line {
-  font-family: 'Source Sans Pro';
   font-size: 20px;
   text-align: center;
+}
+
+.question-same-line#location{
+  text-transform:capitalize;
 }
 
 #button {
@@ -35,7 +28,6 @@ header {
 
 body {
   background: #fafafa;
-  font-family: 'Source Sans Pro', san-serif;
 }
 
 #location {
@@ -88,4 +80,10 @@ input{
 -webkit-border-radius: 50px;
 -moz-border-radius: 50px;
 border-radius: 50px;
+}
+
+html, body{
+  font-family: 'Source Sans Pro', sans-serif;
+  padding:0;
+  margin:0;
 }
