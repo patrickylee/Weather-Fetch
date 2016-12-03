@@ -1,5 +1,87 @@
 /* this is our style sheet */
 
-#header{
- color: blue;
+html, body{
+  padding:0;
+  margin:0;
+}
+
+#header {
+ color: #69cbf0;
+ font-family: 'Source Sans Pro', sans-serif;
+ font-size: 25px;
+ padding-top: 22px;
+}
+
+.question-same-line {
+  font-family: 'Source Sans Pro';
+  font-size: 20px;
+  text-align: center;
+}
+
+#button {
+  text-align: center;
+}
+
+header {
+  background: #fff;
+  margin: 0px;
+  height: 80px;
+  text-align: center;
+}
+
+body {
+  background: #fafafa;
+  font-family: 'Source Sans Pro', san-serif;
+}
+
+#location {
+  width: 400px;
+  height: 50px;
+  margin: 0, auto;
+  border: none;
+}
+
+.input-align {
+  text-align: center;
+}
+
+.button-align {
+  text-align: center;
+}
+
+.button-design{
+  height: 32px;
+  width: 120px;
+  background-color: #69cbf0;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  border-color: #69cbf0;
+  border-style: solid;
+  color: white;
+  font-size: 15px;
+}
+
+.button-design:hover {
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    background: #60b9db;
+    border-style: solid;
+    border-color: #60b9db;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input{
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
 }

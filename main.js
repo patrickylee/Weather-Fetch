@@ -13,6 +13,6 @@
 
       $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "uk&units=metric&appid=48a8c111df81fd58c7240c8f432660e7").then(function(data) {
         var weather = document.getElementById('weather');
-        weather.innerText = ("The temperature is " + data.main.temp + "°C");
+        weather.innerText = data.main.temp;
     })
 }

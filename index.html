@@ -1,19 +1,25 @@
 <html>
 
 <head>
-  <title>Weather Fetch</title>
   <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 
 <body>
-
+<header>
   <h1 id='header'>Weather Fetch</h1>
+</header>
+  <p class="question-same-line"> Where are you planning to go?</p>
+    <div class="input-align">
+      <input class="question-same-line" id="location"></input>
+    </div>
+        <br/>
+    <div class="button-align">
+      <button onclick="myFunction()" class="button-design" id="button">Find</button>
+    </div>
 
-  <input id="location"></input>
-  <button onclick="myFunction()">Submit</button>
-  <p><span id='weather'></span></p>
-  <!--<p>The temperature is <span id='weather'></span><sup>°C</sup></p>-->
-  <script src="jquery-3.1.1.min.js"></script>
+  <p></br><span id='weather'></span></p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="main.js"></script>
 </body>
 
