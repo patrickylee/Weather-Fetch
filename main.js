@@ -7,6 +7,11 @@
 //     weather.innerText = data.main.temp;
 //   })
 // });
+$("#location").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#button").click();
+    }
+});
     function myFunction() {
       var city = document.getElementById('location').value;
       console.log(city);
