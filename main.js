@@ -21,8 +21,17 @@
           } else if (0 > data.main.temp < 10) {
               var cloth = document.getElementById('clothing');
               cloth.innerText = "Clothes: A wool sweater, khakis/jeans";
-		$("#div1").fadeIn();
 	  }
+	      var rain = document.getElementById('rain');
+	      var c;
+	  if(data.main.humidity>75) c = "High chance of ";
+	  else if(data.main.humidity>50) c = "Might ";
+	  else if(data.main.humidity>25) c = "Probably won't ";
+	  else c = "Will not ";
+      if(data.main.temp<0) c+="snow";
+      else c+="rain";
+	      rain.innerText = c;
+		$("#div1").fadeIn();
     })
 	  })
 }
