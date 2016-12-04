@@ -14,7 +14,23 @@
       $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "uk&units=metric&appid=48a8c111df81fd58c7240c8f432660e7").then(function(data) {
         var weather = document.getElementById('weather');
 		city=ucwords(city,true);
-        weather.innerText = "It is "+data.main.temp+"°C in "+city;
+		  var ws = data.wind.speed;
+		  var w;
+		  if(ws<1)w="calm Winds";
+		  else if(ws<1.5)w="light air";
+		  else if(ws<3.3)w="light breeze";
+		  else if(ws<5.5)w="gentle breeze";
+		  else if(ws<7.9)w="moderate breeze";
+		  else if(ws<10.7)w="fresh breeze";
+		  else if(ws<13.8)w="strong breeze";
+		  else if(ws<17.1)w="high wind";
+		  else if(ws<20.7)w="gale";
+		  else if(ws<24.4)w="strong gale";
+		  else if(ws<28.4)w="storm";
+		  else if(ws<32.6)w="violent storm";
+		  else w="hurricane";
+		  w+=" at a speed of "+ws+" meters per second";
+        weather.innerText = "It is "+data.main.temp+"°C in "+city+" with a"+w;
           if (data.main.temp < 0) {
               var cloth = document.getElementById('clothing');
               cloth.innerText = "A warm jacket, mittens, scarf, boots.";
@@ -34,22 +50,6 @@
 	      console.log(rain);
 	      rain.innerText = c;
 		  var wind = document.getElementById('wind');
-		  var ws = data.wind.speed;
-		  var w;
-		  if(ws<1)w="Calm Winds";
-		  else if(ws<1.5)w="Light air";
-		  else if(ws<3.3)w="Light breeze";
-		  else if(ws<5.5)w="Gentle breeze";
-		  else if(ws<7.9)w="Moderate breeze";
-		  else if(ws<10.7)w="Fresh breeze";
-		  else if(ws<13.8)w="Strong breeze";
-		  else if(ws<17.1)w="High Wind";
-		  else if(ws<20.7)w="Gale";
-		  else if(ws<24.4)w="Strong Gale";
-		  else if(ws<28.4)w="Storm";
-		  else if(ws<32.6)w="Violent Storm";
-		  else w="Hurricane";
-		  w+=" with a speed of "+ws+" meters per second";
 		  wind.innerText=w;
 		$("#div1").fadeIn();
     })
