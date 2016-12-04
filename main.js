@@ -36,13 +36,25 @@ $("#location").keyup(function(event){
 		  else w="hurricane";
 		  w+=" at a speed of "+ws+" meters per second";
         weather.innerText = "It is "+data.main.temp+"°C in "+city+" with a "+w;
+		if(data.main.temp<-10){
+			var cloth = document.getElementById('clothing');
+			cloth.innerText = "A thick jacket, snowpants";
+		}
           if (data.main.temp < 0) {
               var cloth = document.getElementById('clothing');
               cloth.innerText = "A warm jacket, mittens, scarf, boots.";
-          } else if (0 > data.main.temp < 10) {
+          } else if (data.main.temp>0&&data.main.temp < 10) {
               var cloth = document.getElementById('clothing');
               cloth.innerText = "A wool sweater, khakis/jeans";
-	  }
+		}
+		else if(data.main.temp>10&&data.main.temp<20){
+			var cloth = document.getElementById('clothing');
+			cloth.innerText = "A thin sweater, khakis/jeans";
+		}
+		else if(data.main.temp>20){
+			var cloth = document.getElementById('clothing');
+			cloth.innerText = "T-shirt and shorts";
+		}
 	      var rain = document.getElementById('rain');
 	      var c;
 	  if(data.main.humidity>75) c = "High chance of ";
