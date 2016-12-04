@@ -33,6 +33,24 @@
 	      console.log(c);
 	      console.log(rain);
 	      rain.innerText = c;
+		  var wind = document.getElementById('wind');
+		  var ws = data.wind.speed;
+		  var w;
+		  if(ws<1)w="Calm Winds";
+		  else if(ws<1.5)w="Light air";
+		  else if(ws<3.3)w="Light breeze";
+		  else if(ws<5.5)w="Gentle breeze";
+		  else if(ws<7.9)w="Moderate breeze";
+		  else if(ws<10.7)w="Fresh breeze";
+		  else if(ws<13.8)w="Strong breeze";
+		  else if(ws<17.1)w="High Wind";
+		  else if(ws<20.7)w="Gale";
+		  else if(ws<24.4)w="Strong Gale";
+		  else if(ws<28.4)w="Storm";
+		  else if(ws<32.6)w="Violent Storm";
+		  else w="Hurricane";
+		  w+=" with a speed of "+ws+" meters per second";
+		  wind.innerText=w;
 		$("#div1").fadeIn();
     })
 	  })
