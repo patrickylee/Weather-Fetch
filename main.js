@@ -22,6 +22,7 @@
               var cloth = document.getElementById('clothing');
               cloth.innerText = "Clothes: A wool sweater, khakis/jeans";
 		$("#div1").fadeIn();
+	  }
     })
 	  })
 }
