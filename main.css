@@ -36,6 +36,10 @@ body {
   border: none;
 }
 
+#clothing {
+  color: green;
+}
+
 .input-align {
   text-align: center;
 }
