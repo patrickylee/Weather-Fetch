@@ -15,12 +15,11 @@
         var weather = document.getElementById('weather');
 		city=ucwords(city,true);
         weather.innerText = "It is "+data.main.temp+"°C in "+city;
+              var cloth = document.getElementById('clothing');
           if (data.main.temp < 0) {
-              var cloth = document.getElementById('clothing');
-              cloth.innerText = "Clothes: A warm jacket, mittens, scarf, boots.";
+              cloth.innerText = "A warm jacket, mittens, scarf, boots.";
           } else if (0 > data.main.temp < 10) {
-              var cloth = document.getElementById('clothing');
-              cloth.innerText = "Clothes: A wool sweater, khakis/jeans";
+              cloth.innerText = "A wool sweater, khakis/jeans";
 	  }
 	      var rain = document.getElementById('rain');
 	      var c;
