@@ -19,11 +19,15 @@
   text-align: center;
 }
 
-header {
-  background: #fff;
+#header {
+  background: #ffffff;
+ font-size: 35px;
   margin: 0px;
-  height: 80px;
   text-align: center;
+ padding-top: 10px;
+  height: 60px;
+  width: 100%;
+  position: fixed;
 }
 
 body {
