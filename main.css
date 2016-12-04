@@ -9,6 +9,10 @@
   text-transform:capitalize;
 }
 
+#rain {
+  color: blue;
+}
+
 #button {
   text-align: center;
 }
