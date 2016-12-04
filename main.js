@@ -18,7 +18,7 @@
           if (data.main.temp < 0) {
               var cloth = document.getElementById('clothing');
               cloth.innerText = "Clothes: A warm jacket, mittens, scarf, boots.";
-          } else if (0 > data.main.temp > 10) {
+          } else if (0 > data.main.temp < 10) {
               var cloth = document.getElementById('clothing');
               cloth.innerText = "Clothes: A wool sweater, khakis/jeans";
 		$("#div1").fadeIn();
