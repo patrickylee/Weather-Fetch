@@ -30,7 +30,7 @@
 		  else if(ws<32.6)w="violent storm";
 		  else w="hurricane";
 		  w+=" at a speed of "+ws+" meters per second";
-        weather.innerText = "It is "+data.main.temp+"°C in "+city+" with a"+w;
+        weather.innerText = "It is "+data.main.temp+"°C in "+city+" with a "+w;
           if (data.main.temp < 0) {
               var cloth = document.getElementById('clothing');
               cloth.innerText = "A warm jacket, mittens, scarf, boots.";
@@ -49,8 +49,6 @@
 	      console.log(c);
 	      console.log(rain);
 	      rain.innerText = c;
-		  var wind = document.getElementById('wind');
-		  wind.innerText=w;
 		$("#div1").fadeIn();
     })
 	  })
