@@ -1,11 +1,5 @@
 /* this is our style sheet */
 
-#header {
- color: #69cbf0;
- font-size: 25px;
- padding-top: 22px;
-}
-
 .question-same-line {
   font-size: 20px;
   text-align: center;
@@ -20,6 +14,7 @@
 }
 
 #header {
+ color: #69cbf0;
   background: #ffffff;
  font-size: 35px;
   margin: 0px;
