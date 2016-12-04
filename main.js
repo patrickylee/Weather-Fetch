@@ -30,6 +30,7 @@
 	  else c = "Will not ";
       if(data.main.temp<0) c+="snow";
       else c+="rain";
+	      console.log(c);
 	      rain.innerText = c;
 		$("#div1").fadeIn();
     })
