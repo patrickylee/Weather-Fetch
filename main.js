@@ -37,7 +37,7 @@ var start;
 	}
 	
 	function directionsApi(){
-		$.getJSON("http://maps.googleapis.com/maps/api/directions/json?origin=\""+start+"\"&destination=\""+city+"\"&key=AIzaSyBhkNCUTF-zdtA1Jh1RNee1Afx9qSEgz1M&callback=?").then(function(data) {
+		$.getJSON("https://maps.googleapis.com/maps/api/directions/json?origin=\""+start+"\"&destination=\""+city+"\"&key=AIzaSyBhkNCUTF-zdtA1Jh1RNee1Afx9qSEgz1M&callback=?").then(function(data) {
 			console.log(data);
 		});
 	}
