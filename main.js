@@ -7,17 +7,19 @@
 //     weather.innerText = data.main.temp;
 //   })
 // });
+
+$("#start").keyup(function(event){
+	if(event.keyCode == 13){
+		$("#button-start").click();
+	}
+});
+
 $("#location").keyup(function(event){
     if(event.keyCode == 13){
         $("#button-location").click();
     }
 });
 
-$("#start").keyup(function(event){
-	if(event.keyCode == 13){
-		$("button-start").click();
-	}
-});
 var start;
 	function myFunc2() {
 		start=ucwords(document.getElementById('start').value,true);
