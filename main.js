@@ -9,9 +9,16 @@
 // });
 $("#location").keyup(function(event){
     if(event.keyCode == 13){
-        $("#button").click();
+        $("#button-location").click();
     }
 });
+
+$("#start").keyup(function(event){
+	if(event.keyCode == 13){
+		$("button-start").click();
+	}
+});
+
     function myFunction() {
       var city = document.getElementById('location').value;
       console.log(city);
