@@ -18,6 +18,11 @@ $("#start").keyup(function(event){
 		$("button-start").click();
 	}
 });
+var start;
+	function myFunc2() {
+		start=document.getElementById('start').value;
+		console.log(start);
+	}
 
     function myFunction() {
       var city = document.getElementById('location').value;
