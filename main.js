@@ -25,6 +25,7 @@ var start;
 		start=ucwords(document.getElementById('start').value,true);
 		console.log(start);
 		$("#main1").fadeOut(function(){
+			$("#main2").fadeIn();
 		});
 	}
 
