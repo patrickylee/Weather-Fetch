@@ -25,7 +25,7 @@ var start;
 	}
 
     function myFunction() {
-      var city = document.getElementById('location').value;
+      var city = ucwords(document.getElementById('location').value,true);
       console.log(city);
       $("#div1").fadeOut(function(){
       $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "uk&units=metric&appid=48a8c111df81fd58c7240c8f432660e7").then(function(data) {
