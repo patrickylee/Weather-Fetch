@@ -24,6 +24,8 @@ var start;
 	function myFunc2() {
 		start=ucwords(document.getElementById('start').value,true);
 		console.log(start);
+		$("#main1").fadeOut(function(){
+		});
 	}
 
     function myFunction() {
