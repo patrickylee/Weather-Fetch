@@ -20,7 +20,7 @@ $("#start").keyup(function(event){
 });
 var start;
 	function myFunc2() {
-		start=document.getElementById('start').value;
+		start=ucwords(document.getElementById('start').value,true);
 		console.log(start);
 	}
 
