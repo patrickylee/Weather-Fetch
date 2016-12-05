@@ -29,11 +29,24 @@ var start;
 		});
 	}
 
-    function myFunction() {
+	var city;
+	function myFunction(){
+		city = ucwords(document.getElementById('location').value,true);
+		console.log(city);
+		directionsApi();
+	}
+	
+	function directionsApi(){
+		$.getJSON("http://maps.googleapis.com/maps/api/directions/json?origin=\""+start+"\"&destination=\""+city+"\"&key=AIzaSyBhkNCUTF-zdtA1Jh1RNee1Afx9qSEgz1M&callback=?").then(function(data) {
+			console.log(data);
+		});
+	}
+	
+    /*function myFunction() {
       var city = ucwords(document.getElementById('location').value,true);
       console.log(city);
       $("#div1").fadeOut(function(){
-      $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "uk&units=metric&appid=48a8c111df81fd58c7240c8f432660e7").then(function(data) {
+      $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=48a8c111df81fd58c7240c8f432660e7").then(function(data) {
         var weather = document.getElementById('weather');
 		city=ucwords(city,true);
 		  var ws = data.wind.speed;
@@ -86,7 +99,7 @@ var start;
 		$("#div1").fadeIn();
     })
 	  })
-}
+}*/
 
 //http://stackoverflow.com/questions/2017456/with-jquery-how-do-i-capitalize-the-first-letter-of-a-text-field-while-the-user
 function ucwords(str,force){
