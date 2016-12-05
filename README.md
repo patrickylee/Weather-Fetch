@@ -1,6 +1,6 @@
 # Weather-Fetch
 
-https://htmlpreview.github.io/?https://raw.githubusercontent.com/patrickylee/Weather-Fetch/master/index.html
+https://patrickylee.github.io/Weather-Fetch/
 
 48a8c111df81fd58c7240c8f432660e7
 
