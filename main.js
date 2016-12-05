@@ -30,7 +30,7 @@ var start;
 	}
 
 	var city;
-	function myFunction(){
+	/*function myFunction(){
 		city = ucwords(document.getElementById('location').value,true);
 		console.log(city);
 		directionsApi();
@@ -40,9 +40,9 @@ var start;
 		$.getJSON("https://maps.googleapis.com/maps/api/directions/json?origin=\""+start+"\"&destination=\""+city+"\"&key=AIzaSyBhkNCUTF-zdtA1Jh1RNee1Afx9qSEgz1M&callback=?").then(function(data) {
 			console.log(data);
 		});
-	}
+	}*/
 	
-    /*function myFunction() {
+    function myFunction() {
       var city = ucwords(document.getElementById('location').value,true);
       console.log(city);
       $("#div1").fadeOut(function(){
@@ -99,7 +99,7 @@ var start;
 		$("#div1").fadeIn();
     })
 	  })
-}*/
+}
 
 //http://stackoverflow.com/questions/2017456/with-jquery-how-do-i-capitalize-the-first-letter-of-a-text-field-while-the-user
 function ucwords(str,force){
