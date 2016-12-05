@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.question-same-line#location,.question-same-line#start{
+.question-same-line#location, .question-same-line#start{
   text-transform:capitalize;
 }
 
