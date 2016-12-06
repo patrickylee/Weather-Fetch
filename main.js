@@ -70,6 +70,7 @@ var start;
 	
 	function func(item, index){
 		console.log(item+": "+index);
+		console.log(item[0]);
 	}
 	
 	function directionsApi(){
