@@ -68,8 +68,8 @@ var start;
 		directionsApi();
 	}
 	
-	function func(lat, lng){
-		console.log(lat+": "+lng);
+	function func(item, index){
+		console.log(item+": "+index);
 	}
 	
 	function directionsApi(){
