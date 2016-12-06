@@ -1,6 +1,6 @@
 # Rainy-Roads
 
-https://patrickylee.github.io/Weather-Fetch/
+http://rainyroads.tk/
 
 48a8c111df81fd58c7240c8f432660e7
 
