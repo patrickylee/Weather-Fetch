@@ -8,6 +8,38 @@
 //   })
 // });
 
+var directionsService;
+var directionsDisplay;
+var map;
+function initMap() {
+	directionService = new google.maps.DirectionsService;
+	directionsDisplay = new google.maps.DirectionsRenderer;
+	map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 7,
+		center: {lat: 41.85, lng: -87.65}
+	});
+	directionsDisplay.setMap(map);
+
+	var onChangeHandler = function() {
+		calculateAndDisplayRoute(directionsService, directionsDisplay);
+	};
+	document.getElementById('location').addEventListener('change', onChangeHandler);
+}
+
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+	directionsService.route({
+		origin: document.getElementById('start').value,
+		destination: document.getElementById('location').value,
+		travelMode: 'DRIVING'
+	}, function(response, status) {
+		if (status === 'OK') {
+			directionsDisplay.setDirections(response);
+		} else {
+			window.alert('Directions request failed due to ' + status);
+		}
+	});
+}
+
 $("#start").keyup(function(event){
 	if(event.keyCode == 13){
 		$("#button-start").click();
@@ -36,10 +68,43 @@ var start;
 		directionsApi();
 	}
 	
+	function func(lat, lng){
+		console.log(lat+": "+lng);
+	}
+	
 	function directionsApi(){
-		$.getJSON("https://maps.googleapis.com/maps/api/directions/json?origin=\""+start+"\"&destination=\""+city+"\"&key=AIzaSyBhkNCUTF-zdtA1Jh1RNee1Afx9qSEgz1M&callback=?").then(function(data) {
+	var directionsService = new google.maps.DirectionsService;
+	var directionsRequest = {
+            origin: start,
+            destination: city,
+			travelMode: 'DRIVING'
+        };
+        directionService.route(directionsRequest, function (response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+				response.routes[0].overview_path.forEach(func);
+				console.log(response.routes[0].overview_path);			
+            //do work with response data
+            }
+            else{
+				console.log(1);
+                //Error has occured
+			}
+        });
+		/*$.ajax({
+		origin: start,
+		destination: city;
+        type: 'GET',
+        url: "https://maps.googleapis.com/maps/api/directions/json?origin=\""+start+"\"&destination=\""+city+"\"&key=AIzaSyBhkNCUTF-zdtA1Jh1RNee1Afx9qSEgz1M",
+        async: false,
+        jsonpCallback: 'jsonCallback',
+        contentType: "application/json",
+        dataType: 'jsonp',
+        success: function (data) {
 			console.log(data);
-		});
+        },
+        error: function (e) {
+            console.log(e);
+        }*/
 	}
 	
     /*function myFunction() {
