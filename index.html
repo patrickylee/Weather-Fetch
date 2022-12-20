@@ -10,42 +10,46 @@
 </head>
 
 <body>
-<header>
-  <div id='header'>Rainy Roads</div>
-</header>
-<br/>
-<br/>
-<br/>
-  <div id="main1">
-  <p class="question-same-line">Where are you starting?</p>
-  <div class="input-align">
-    <input class="question-same-line" id="start"></input>
-  </div>
+  <header>
+    <div id='header'>Rainy Roads</div>
+  </header>
   <br />
-  <div class="button-align">
-    <button onclick="myFunc2()" class="button-design" id="button-start">Next</button>
+  <br />
+  <br />
+  <div id="main1">
+    <p class="question-same-line">Where are you starting?</p>
+    <div class="input-align">
+      <input class="question-same-line" id="start"></input>
+    </div>
+    <br />
+    <div class="button-align">
+      <button onclick="myFunc2()" class="button-design" id="button-start">Next</button>
+    </div>
   </div>
-  </div>
-  
+
   <div id="main2" style="display:none;">
-  <p class="question-same-line">Where are you planning to go?</p>
+    <p class="question-same-line">Where are you planning to go?</p>
     <div class="input-align">
       <input class="question-same-line" id="location"></input>
     </div>
-  <br />
+    <br />
     <div class="button-align">
       <button onclick="myFunction()" class="button-design" id="button-location">Find</button>
     </div>
   </div>
 
-  <br /><center><div id="div1" style="display:none;"><span id='weather'></span>
-  <p class='clothing'>Clothes: <span id='clothing'></span></p>
-  <p id='rain'></p>
-  </div></center>
+  <br />
+  <center>
+    <div id="div1" style="display:none;"><span id='weather'></span>
+      <p class='clothing'>Clothes: <span id='clothing'></span></p>
+      <p id='rain'></p>
+    </div>
+  </center>
   <div id="map"></div>
   <script src="jquery-3.1.1.min.js"></script>
   <script src="main.js"></script>
-  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDxy99q54RMWZhSwwlMMiavb2PtkyJ5XiM&callback=initMap"></script>
+  <script
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDxy99q54RMWZhSwwlMMiavb2PtkyJ5XiM&callback=initMap"></script>
   <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhkNCUTF-zdtA1Jh1RNee1Afx9qSEgz1M&callback=init">-->
 </body>
 
